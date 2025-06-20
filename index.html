@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Web Slate offers professional graphic design services for businesses and organizations. Posters, flyers, social media templates, logos and more."
+    />
+    <meta
+      name="keywords"
+      content="web slate, graphic design, affordable design, posters, flyers, business cards, social media templates, logo design"
+    />
+    <title>Web Slate | Professional Graphic Design Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f9f9f7;
+        color: #333;
+        scroll-behavior: smooth;
+      }
+      .title-font {
+        font-family: "Playfair Display", serif;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap");
+      .gradient-text {
+        background: linear-gradient(90deg, #ff8c00, #ffa500);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero-gradient {
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.95) 100%
+          ),
+          url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+      .work-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #6366f1;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover:after {
+        width: 100%;
+      }
+      .active-nav:after {
+        width: 100%;
+      } /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+      .delay-100 {
+        animation-delay: 0.1s;
+      }
+      .delay-200 {
+        animation-delay: 0.2s;
+      }
+      .delay-300 {
+        animation-delay: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md fixed w-full z-50 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <img src="favicon.png" alt="Web Slate Logo" class="h-10" />
+            <span class="ml-3 text-xl font-bold text-black">Web Slate</span>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-center space-x-8">
+              <a
+                href="#home"
+                class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium active-nav"
+                >Home</a
+              >
+              <a
+                href="#services"
+                class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
+                >Services</a
+              >
+              <a
+                href="#portfolio"
+                class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
+                >Portfolio</a
+              >
+              <a
+                href="#pricing"
+                class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
+                >Pricing</a
+              >
+              <a
+                href="#testimonials"
+                class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
+                >Testimonials</a
+              >
+              <a
+                href="#contact"
+                class="bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-orange-700 transition duration-300 shadow-md hover:shadow-lg"
+                >Get a Quote</a
+              >
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-700 hover:text-indigo-600 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-white shadow-lg rounded-b-lg"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+            >Home</a
+          >
+          <a
+            href="#services"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+            >Services</a
+          >
+          <a
+            href="#portfolio"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+            >Portfolio</a
+          >
+          <a
+            href="#pricing"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+            >Pricing</a
+          >
+          <a
+            href="#testimonials"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+            >Testimonials</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+            >Get a Quote</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="animate-fade-in">
+            <h1
+              class="text-5xl md:text-6xl lg:text-7xl font-extrabold title-font mb-6 leading-tight"
+            >
+              <span class="gradient-text">Beautiful Designs</span><br />
+              For Your Local Business
+            </h1>
+            <p class="text-lg text-gray-600 mb-8 max-w-lg">
+              Professional graphic design services for businesses, personal
+              projects, and organizations. Quality work at competitive prices.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md font-medium transition duration-300"
+              >
+                Get Started Today
+              </a>
+              <a
+                href="#portfolio"
+                class="border border-gray-300 hover:border-indigo-600 text-gray-700 hover:text-indigo-600 px-6 py-3 rounded-md font-medium transition duration-300"
+              >
+                View My Work
+              </a>
+            </div>
+            <div class="mt-10 flex items-center space-x-6">
+              <div class="flex -space-x-2">
+                <img
+                  class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+                  src="https://randomuser.me/api/portraits/women/12.jpg"
+                  alt="Client"
+                />
+                <img
+                  class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="Client"
+                />
+                <img
+                  class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  alt="Client"
+                />
+              </div>
+              <div>
+                <p class="text-sm text-gray-600">
+                  Trusted by
+                  <span class="font-semibold text-indigo-600">50+</span> local
+                  businesses
+                </p>
+                <div class="flex items-center">
+                  <div class="flex items-center">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                  </div>
+                  <span class="ml-2 text-sm text-gray-600"
+                    >5.0 (42 reviews)</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animate-fade-in delay-100">
+            <div class="relative">
+              <div
+                class="absolute -top-6 -left-6 w-full h-full rounded-2xl bg-indigo-100 z-0"
+              ></div>
+              <div class="relative z-10 rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  alt="Design Work"
+                  class="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 animate-fade-in">
+          <span class="text-indigo-600 font-semibold">WHAT I OFFER</span>
+          <h2 class="text-3xl md:text-4xl font-bold title-font mt-2 mb-4">
+            Graphic Design Services
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Professional design solutions tailored for local businesses at
+            affordable prices.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-gray-50 rounded-xl p-8 transition-all duration-300 hover:bg-white hover:shadow-lg animate-fade-in delay-100"
+          >
+            <div
+              class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-bullhorn text-indigo-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Marketing Materials</h3>
+            <p class="text-gray-600 mb-4">
+              Eye-catching flyers, posters, and brochures that get your message
+              across effectively.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                <span>Business Flyers</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                <span>Event Posters</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                <span>Product Brochures</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Service 2 -->
+          <div
+            class="bg-gray-50 rounded-xl p-8 transition-all duration-300 hover:bg-white hover:shadow-lg animate-fade-in delay-200"
+          >
+            <div
+              class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-users text-indigo-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Social Media Graphics</h3>
+            <p class="text-gray-600 mb-4">
+              Professional templates and posts to boost your social media
+              presence.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                <span>Post Templates</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                <span>Story Designs</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                <span>Cover Photos</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="bg-gray-50 rounded-xl p-8 transition-all duration-300 hover:bg-white hover:shadow-lg animate-fade-in delay-300"
+          >
+            <div
+              class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-store text-indigo-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Branding & Identity</h3>
+            <p class="text-gray-600 mb-4">
+              Create a memorable brand that stands out in your local market.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                <span>Logo Design</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                <span>Business Cards</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                <span>Brand Guidelines</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-indigo-600 font-semibold">MY WORK</span>
+          <h2 class="text-3xl md:text-4xl font-bold title-font mt-2 mb-4">
+            Recent Projects
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            A selection of my latest design work for local businesses.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Project 1 -->
+          <div
+            class="work-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Cafe Menu Design"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 text-xs font-semibold bg-indigo-100 text-indigo-600 rounded-full mb-2"
+                >Menu Design</span
+              >
+              <h3 class="text-xl font-bold mb-2">Local Cafe Menu</h3>
+              <p class="text-gray-600">
+                Modern, clean menu design for a neighborhood coffee shop.
+              </p>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="work-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Social Media Templates"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 text-xs font-semibold bg-indigo-100 text-indigo-600 rounded-full mb-2"
+                >Social Media</span
+              >
+              <h3 class="text-xl font-bold mb-2">Bakery Social Posts</h3>
+              <p class="text-gray-600">
+                Monthly content templates for a local bakery's Instagram.
+              </p>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div
+            class="work-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Event Flyer"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 text-xs font-semibold bg-indigo-100 text-indigo-600 rounded-full mb-2"
+                >Event Flyer</span
+              >
+              <h3 class="text-xl font-bold mb-2">Community Festival</h3>
+              <p class="text-gray-600">
+                Vibrant flyer design for a local summer festival.
+              </p>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div
+            class="work-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80"
+                alt="Business Cards"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 text-xs font-semibold bg-indigo-100 text-indigo-600 rounded-full mb-2"
+                >Branding</span
+              >
+              <h3 class="text-xl font-bold mb-2">Consultant Business Cards</h3>
+              <p class="text-gray-600">
+                Elegant, professional business card design.
+              </p>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div
+            class="work-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Product Packaging"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 text-xs font-semibold bg-indigo-100 text-indigo-600 rounded-full mb-2"
+                >Packaging</span
+              >
+              <h3 class="text-xl font-bold mb-2">Local Honey Label</h3>
+              <p class="text-gray-600">
+                Rustic, natural label design for a small honey producer.
+              </p>
+            </div>
+          </div>
+          <!-- Project 6 -->
+          <div
+            class="work-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1515&q=80"
+                alt="Signage Design"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 text-xs font-semibold bg-indigo-100 text-indigo-600 rounded-full mb-2"
+                >Signage</span
+              >
+              <h3 class="text-xl font-bold mb-2">Boutique Store Sign</h3>
+              <p class="text-gray-600">
+                Eye-catching window signage for a local clothing boutique.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a
+            href="#contact"
+            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300"
+          >
+            Need Something Similar? Let's Talk
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-indigo-600 font-semibold">AFFORDABLE RATES</span>
+          <h2 class="text-3xl md:text-4xl font-bold title-font mt-2 mb-4">
+            Simple, Transparent Pricing
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Budget-friendly options for local businesses and entrepreneurs.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Basic Package -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:border-indigo-300 transition-all duration-300"
+          >
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold mb-1">Starter</h3>
+              <p class="text-gray-600 text-sm">Perfect for small projects</p>
+            </div>
+            <div class="p-6">
+              <div class="mb-6">
+                <span class="text-4xl font-bold">$49</span>
+                <span class="text-gray-500">/project</span>
+              </div>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-2"></i>
+                  <span>1 Design Concept</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-2"></i>
+                  <span>2 Revisions</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-2"></i>
+                  <span>1-3 Day Turnaround</span>
+                </li>
+                <li class="flex items-center text-gray-400">
+                  <i class="fas fa-times mr-2"></i> <span>Source Files</span>
+                </li>
+                <li class="flex items-center text-gray-400">
+                  <i class="fas fa-times mr-2"></i>
+                  <span>Brand Guidelines</span>
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="block w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-md transition duration-300"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+          <!-- Popular Package -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-orange-500 transform hover:scale-105 transition-all duration-300 relative"
+          >
+            <div
+              class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg"
+            >
+              MOST POPULAR
+            </div>
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold mb-1">Professional</h3>
+              <p class="text-gray-600 text-sm">Best for growing businesses</p>
+            </div>
+            <div class="p-6">
+              <div class="mb-6">
+                <span class="text-4xl font-bold">$99</span>
+                <span class="text-gray-500">/project</span>
+              </div>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-2"></i>
+                  <span>3 Design Concepts</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-2"></i>
+                  <span>Unlimited Revisions</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-2"></i>
+                  <span>3-5 Day Turnaround</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-2"></i>
+                  <span>Source Files</span>
+                </li>
+                <li class="flex items-center text-gray-400">
+                  <i class="fas fa-times mr-2"></i>
+                  <span>Brand Guidelines</span>
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md transition duration-300"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+          <!-- Premium Package -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:border-indigo-300 transition-all duration-300"
+          >
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold mb-1">Premium</h3>
+              <p class="text-gray-600 text-sm">Complete branding solution</p>
+            </div>
+            <div class="p-6">
+              <div class="mb-6">
+                <span class="text-4xl font-bold">$149</span>
+                <span class="text-gray-500">/project</span>
+              </div>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-2"></i>
+                  <span>5+ Design Concepts</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-2"></i>
+                  <span>Unlimited Revisions</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-2"></i>
+                  <span>7-10 Day Turnaround</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-2"></i>
+                  <span>Source Files</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-2"></i>
+                  <span>Brand Guidelines</span>
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="block w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-md transition duration-300"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 bg-indigo-50 rounded-xl p-8 max-w-4xl mx-auto">
+          <div class="md:flex items-center">
+            <div class="md:w-3/4 mb-6 md:mb-0">
+              <h3 class="text-xl font-bold mb-2">Need something custom?</h3>
+              <p class="text-gray-600">
+                I offer flexible pricing for unique projects. Get in touch to
+                discuss your specific needs.
+              </p>
+            </div>
+            <div class="md:w-1/4 text-right">
+              <a
+                href="#contact"
+                class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-indigo-600 font-semibold">HAPPY CLIENTS</span>
+          <h2 class="text-3xl md:text-4xl font-bold title-font mt-2 mb-4">
+            What My Clients Say
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Don't just take my word for it - hear from local business owners
+            I've worked with.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="testimonial-card rounded-xl p-8 shadow-md border border-orange-100 bg-white"
+          >
+            <div class="flex items-center mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6 italic">
+              "Working with [YourName] was a game-changer for my small bakery.
+              The social media templates she created helped me triple my
+              Instagram engagement in just two months!"
+            </p>
+            <div class="flex items-center">
+              <img
+                class="w-12 h-12 rounded-full mr-4"
+                src="https://randomuser.me/api/portraits/women/43.jpg"
+                alt="Sarah Johnson"
+              />
+              <div>
+                <h4 class="font-bold">Sarah Johnson</h4>
+                <p class="text-gray-600 text-sm">Owner, Sweet Treats Bakery</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div
+            class="testimonial-card rounded-xl p-8 shadow-sm border border-gray-100"
+          >
+            <div class="flex items-center mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6 italic">
+              "The event flyers [YourName] designed brought in record attendance
+              to our community fundraiser. She perfectly captured our vision and
+              delivered quickly."
+            </p>
+            <div class="flex items-center">
+              <img
+                class="w-12 h-12 rounded-full mr-4"
+                src="https://randomuser.me/api/portraits/men/65.jpg"
+                alt="Michael Chen"
+              />
+              <div>
+                <h4 class="font-bold">Michael Chen</h4>
+                <p class="text-gray-600 text-sm">
+                  Director, Local Community Center
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div
+            class="testimonial-card rounded-xl p-8 shadow-sm border border-gray-100"
+          >
+            <div class="flex items-center mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6 italic">
+              "As a small business owner, I needed professional designs without
+              the big agency prices. [YourName] delivered exactly what I needed
+              - beautiful, effective designs at a fraction of the cost."
+            </p>
+            <div class="flex items-center">
+              <img
+                class="w-12 h-12 rounded-full mr-4"
+                src="https://randomuser.me/api/portraits/women/28.jpg"
+                alt="Lisa Rodriguez"
+              />
+              <div>
+                <h4 class="font-bold">Lisa Rodriguez</h4>
+                <p class="text-gray-600 text-sm">
+                  Founder, Urban Fitness Studio
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="text-indigo-600 font-semibold">GET IN TOUCH</span>
+            <h2 class="text-3xl md:text-4xl font-bold title-font mt-2 mb-4">
+              Ready to Elevate Your Brand?
+            </h2>
+            <p class="text-gray-600 mb-8 max-w-lg">
+              Fill out the form or contact me directly to discuss your project.
+              I typically respond within 24 hours.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center"
+                  >
+                    <i class="fas fa-envelope text-indigo-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-900">Email Me</h3>
+                  <p class="text-gray-600">yourname@example.com</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center"
+                  >
+                    <i class="fas fa-phone-alt text-indigo-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-900">Call Me</h3>
+                  <p class="text-gray-600">(123) 456-7890</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center"
+                  >
+                    <i class="fas fa-map-marker-alt text-indigo-600"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-900">Location</h3>
+                  <p class="text-gray-600">
+                    Serving local businesses in [Your City] and surrounding
+                    areas
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <h3 class="text-lg font-medium mb-4">Follow My Work</h3>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition duration-300"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition duration-300"
+                >
+                  <i class="fab fa-behance"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition duration-300"
+                >
+                  <i class="fab fa-dribbble"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition duration-300"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/mqabdpyb"
+              method="POST"
+              class="space-y-6"
+            >
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+              <div>
+                <label
+                  for="phone"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Phone Number (Optional)</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+              <div>
+                <label
+                  for="service"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Service Needed</label
+                >
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
+                >
+                  <option value="">Select a service</option>
+                  <option value="Flyers/Posters">Flyers/Posters</option>
+                  <option value="Social Media Graphics">
+                    Social Media Graphics
+                  </option>
+                  <option value="Logo Design">Logo Design</option>
+                  <option value="Business Cards">Business Cards</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Project Details</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
+                ></textarea>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="w-full bg-orange-600 text-white py-3 px-4 rounded-md hover:bg-orange-700 transition duration-300 font-medium shadow-md hover:shadow-lg"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+            <div
+              id="formSuccess"
+              class="hidden mt-4 p-4 bg-green-50 text-green-700 rounded-md"
+            >
+              <i class="fas fa-check-circle mr-2"></i>
+              <span
+                >Thank you! Your message has been sent. I'll get back to you
+                within 24 hours.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <h3 class="text-2xl font-bold title-font mb-4">Web Slate</h3>
+            <p class="text-gray-400 mb-6">
+              Professional graphic design services for all types of projects.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://instagram.com/yourprofile"
+                class="text-gray-400 hover:text-[#FF6B6B] transition duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://facebook.com/yourprofile"
+                class="text-gray-400 hover:text-[#4267B2] transition duration-300"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://wa.me/yournumber"
+                class="text-gray-400 hover:text-[#25D366] transition duration-300"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a
+                href="https://twitter.com/yourprofile"
+                class="text-gray-400 hover:text-black transition duration-300"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#pricing"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Flyers & Posters</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Social Media Graphics</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Logo Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Business Cards</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Packaging Design</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2023 Designer. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white text-sm transition duration-300"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white text-sm transition duration-300"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            } // Scroll to
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+            // Update active nav link
+            document.querySelectorAll(".nav-link").forEach((link) => {
+              link.classList.remove("active-nav");
+            });
+            this.classList.add("active-nav");
+          }
+        });
+      });
+      // Update active nav link on scroll
+      window.addEventListener("scroll", function () {
+        const scrollPosition = window.scrollY;
+        document.querySelectorAll("section").forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute("id");
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
+            document.querySelectorAll(".nav-link").forEach((link) => {
+              link.classList.remove("active-nav");
+              if (link.getAttribute("href") === `#${sectionId}`) {
+                link.classList.add("active-nav");
+              }
+            });
+          }
+        });
+      });
+      // Simple animation on scroll
+      const animateOnScroll = function () {
+        const elements = document.querySelectorAll(".animate-fade-in");
+        elements.forEach((element) => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          if (elementPosition < windowHeight - 100) {
+            element.style.opacity = "1";
+            element.style.transform = "translateY(0)";
+          }
+        });
+      };
+      // Run once on page load
+      animateOnScroll();
+      // Run on scroll
+      window.addEventListener("scroll", animateOnScroll);
+    </script>
+  </body>
+</html>
+<!-- in this code make th e nav bar good and make the logo and compay name stand
+out and also keep the color theme orange , black and white throughout the
+websites and also add some carousal in it with proper animations and transitions
+and add animations in the entire web site -->
